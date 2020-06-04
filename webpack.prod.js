@@ -26,6 +26,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
+            },
+            {
+                test: /\.ico$/,
+                loader: 'file-loader?name=[name].[ext]'  // <-- retain original file name
             }
         ]
     },
