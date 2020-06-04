@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Matt's NLP Webpack Project</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="title-bar">
+                <h1>Matt's NLP API Sentiment Lookup</h1>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="">
+                    <label for="url">Enter a valid URL</label>
+                    <input type="url" name="url" id="url"
+                        placeholder="https://example.com"
+                        pattern="https://.*" 
+                        required>
+                    <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results">
+                    <div id="polarity"></div>
+                    <div id="subjectivity"></div>
+                    <div id="sample-text"></div>
+                    <div id="polarity-confidence"></div>
+                    <div id="subjectivity-confidence"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>*Project for Frontend Nanodegree by Matt Christensen</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>

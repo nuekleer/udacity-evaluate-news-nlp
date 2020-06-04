@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.title-bar{
+    h1 {
+        font-size: 3em;
+    }
+    width: 100%;
+    text-align: center;
+}
