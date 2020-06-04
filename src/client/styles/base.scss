@@ -1,7 +1,10 @@
+$base-font: Verdana;
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: $base-font;
 }
 
 main {
@@ -11,4 +14,20 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+strong{
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+#results{
+    div {
+        span {
+            color: red;
+        }
+        padding-bottom:10px;
+    }
+    border: 1px solid;
+    padding: 15px;
 }

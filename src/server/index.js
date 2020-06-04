@@ -56,7 +56,7 @@ app.post('/callNLP', function (req, res) {
       else{
         //process error
         console.log(error);
-        alert('Unable to check page at this time');
+        res.send({error:"there was a problem"});
       }
   });
 })

@@ -21,10 +21,15 @@ export const postData = async ( url = '', data = {})=>{
 
 //update index.html
 export function updateUI(data){
-    document.getElementById('polarity').innerHTML = "Polarity: " + data.polarity;
-    document.getElementById('subjectivity').innerHTML = "Subjectivity: " + data.subjectivity;
-    document.getElementById('sample-text').innerHTML = "Sample Text: " + data.text;
-    document.getElementById('polarity-confidence').innerHTML = "Polarity Confidence: " + data.polarity_confidence;
-    document.getElementById('subjectivity-confidence').innerHTML = "Subjectivity Confidence: " + data.subjectivity_confidence;
+    if(data.error !="there was a problem"){
+        document.getElementById('polarity').innerHTML = "<span>Polarity</span>: " + data.polarity;
+        document.getElementById('subjectivity').innerHTML = "<span>Subjectivity</span>: " + data.subjectivity;
+        document.getElementById('sample-text').innerHTML = "<span>Sample Text</span>: " + data.text;
+        document.getElementById('polarity-confidence').innerHTML = "<span>Polarity Confidence</span>: " + data.polarity_confidence;
+        document.getElementById('subjectivity-confidence').innerHTML = "<span>Subjectivity Confidence</span>: " + data.subjectivity_confidence;
+    }
+    else{
+        alert('Unable to check page at this time');
+    }
 }
 
